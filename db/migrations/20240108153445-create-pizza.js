@@ -15,6 +15,9 @@ module.exports = {
       comp: {
         type: Sequelize.STRING,
       },
+      price: {
+        type: Sequelize.STRING,
+      },
       picture: {
         type: Sequelize.STRING,
       },

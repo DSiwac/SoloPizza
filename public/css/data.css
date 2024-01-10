@@ -267,3 +267,58 @@ hr {
 }
 
 /* For centering the whole form in the middle of the page */
+.basketForm {
+  background: #fff; /* белый фон для формы */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* немного тени для объема */
+  max-width: 1000px; /* Можно изменить на нужную ширину */
+}
+
+/* Стилизация для строк товаров */
+.row {
+  border-bottom: 1px solid #eaeaea; /* светлая линия между строками товаров */
+  padding: 15px 0;
+}
+
+/* Стилизация изображения товара */
+.row img {
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Стилизация текстовых полей (название, цена, количество) */
+.col-lg-3, .col-lg-2, .col-lg-1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Особый стиль для названия товара и его цены */
+.col-lg-3 {
+  color: #d35400; /* пицца цвет для выделения */
+  font-weight: bold;
+}
+
+/* Кнопка удаления товара из корзины */
+.col-lg-3 button {
+  border: none;
+  background: #e74c3c; /* красный цвет для внимания */
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.col-lg-3 button:hover {
+  background: #c0392b; /* более темный оттенок при наведении */
+}
+
+/* Адаптивность для разных размеров экрана */
+@media (max-width: 768px) {
+  .mob-fix {
+    margin-top: 10px;
+  }
+}

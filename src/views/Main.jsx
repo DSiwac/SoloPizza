@@ -2,9 +2,10 @@ const React = require("react");
 const Layout = require("./Layout");
 
 module.exports = function MainPage({ login, pizzas }) {
+  
   return (
     <Layout login={login}>
-      <form action="/" method="GET" className="mainForm">
+      <form action="/" method="GET" id="mainForm">
         <div className="cardDiv">
           {pizzas.map((pizza) => (
             <div key={pizza.id} className="card" style={{ width: "18rem" }}>
@@ -17,12 +18,17 @@ module.exports = function MainPage({ login, pizzas }) {
               <div className="card-body">
                 <h5 className="card-title">{pizza.name}</h5>
                 <p className="card-text">{pizza.comp}</p>
-                <a href="/basket" className="btn btn-primary">
+                <p className="card-text">{pizza.price}</p>
+                <a
+                  href={`/basket/${pizza.id}`}
+                  type="submit"
+                  className="btn btn-primary"
+                  id={pizza.id}
+                >
                   В корзину
                 </a>
                 <div class="s-pricing-wrapper">
-                  
-                  <span class="s-price price">449 р</span>
+                  <span class="s-price price"></span>
                 </div>
                 <div className="s-quantity-wrapper">
                   <input

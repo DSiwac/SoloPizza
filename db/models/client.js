@@ -5,12 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.belongsToMany(models.Pizza, {
         through: models.Basket,
-        foreignKey: "clientID",
+        foreignKey: "ClientId", 
       });
-      
+
       this.belongsToMany(models.Pizza, {
         through: models.History,
-        foreignKey: "clientID", 
+        foreignKey: "ClientId", 
       });
     }
   }
