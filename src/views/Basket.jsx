@@ -2,10 +2,11 @@ const React = require("react");
 const Layout = require("./Layout");
 
 module.exports = function Basket({ login, basketEntries }) {
+  //  console.log(basketEntries);
   return (
     <Layout login={login}>
       <script defer src="/client/delet.js"></script>
-      <form method="POST" action="/bascet" id="basketForm">
+      <div className="ppp">
         {basketEntries &&
           basketEntries.map((entry) => (
             <div
@@ -25,21 +26,16 @@ module.exports = function Basket({ login, basketEntries }) {
                   <div className="card-body">
                     <h5 className="card-title">{entry.Pizza.name}</h5>
                     <p className="card-text">{entry.Pizza.comp}</p>
-                    
-                    <form
-                      method="POST"
-                      action={`/basket/delete/${entry.pizzaID}`}
-                    >
-                      <button type="submit" className="btn btn-danger">
-                        Удалить
-                      </button>
-                    </form>
+                    <h5>{entry.id}rtyrtyrtyrty</h5>
+                    <button id={entry.Pizza.id} className="btn btn-danger">
+                      Удалить
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-      </form>
+      </div>
     </Layout>
   );
 };

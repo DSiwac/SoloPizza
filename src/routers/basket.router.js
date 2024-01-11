@@ -13,6 +13,7 @@ basketRouter.get("/", async (req, res) => {
       where: { ClientId: client.id },
       include: [Pizza],
     });
+    console.log(basketEntries);
     renderTemplate(BasketView, { login, basketEntries }, res);
   } catch (error) {
     console.error("Ошибка", error);
@@ -36,7 +37,7 @@ basketRouter.get("/:id", async (req, res) => {
     renderTemplate(ErrorView, { error: error.message }, res);
   }
 });
-basketRouter.post("/delete/:pizzaID", async (req, res) => {
+basketRouter.delete("/:pizzaID", async (req, res) => {
   const { login } = req.session;
   const { pizzaID } = req.params; 
   try {
@@ -49,7 +50,7 @@ basketRouter.post("/delete/:pizzaID", async (req, res) => {
           pizzaID: pizzaID,
         },
       });
-      res.redirect("/basket"); 
+      res.json({msg: "well"}) 
     } else {
       res.status(404).send("Клиент не найден");
     }

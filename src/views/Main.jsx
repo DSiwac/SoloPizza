@@ -2,7 +2,6 @@ const React = require("react");
 const Layout = require("./Layout");
 
 module.exports = function MainPage({ login, pizzas }) {
-  
   return (
     <Layout login={login}>
       <form action="/" method="GET" id="mainForm">
@@ -52,6 +51,9 @@ module.exports = function MainPage({ login, pizzas }) {
               </div>
             </div>
           ))}
+          <div id="map" className="map"></div>
+          <script src="https://api-maps.yandex.ru/2.1/?apikey=6f2f6c61-b308-4695-a4c2-c977f7f6967f&lang=ru_RU"></script>
+          <script src="map.js"></script>
         </div>
       </form>
     </Layout>

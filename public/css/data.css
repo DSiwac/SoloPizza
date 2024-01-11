@@ -21,6 +21,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
   
 }
 
@@ -30,7 +31,13 @@ body {
   justify-content: center;
   padding: 20px;
 }
-
+.map{
+  width: 300px;
+  height: 200px;
+  background-color: #333;
+  display: flex;
+  
+}
 .cardDiv {
   display: flex;
 
@@ -276,9 +283,9 @@ hr {
   max-width: 1000px; /* Можно изменить на нужную ширину */
 }
 
-/* Стилизация для строк товаров */
+
 .row {
-  border-bottom: 1px solid #eaeaea; /* светлая линия между строками товаров */
+  border-bottom: 1px solid #eaeaea; 
   padding: 15px 0;
 }
 

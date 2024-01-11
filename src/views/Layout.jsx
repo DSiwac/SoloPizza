@@ -65,7 +65,6 @@ module.exports = function Layout({ children, login }) {
                       </a>
                     </li>
                   </ul>
-                  
                 ) : (
                   <ul className="navbar-nav">
                     <li className="nav-item">
@@ -78,6 +77,7 @@ module.exports = function Layout({ children, login }) {
                         Регистрация
                       </a>
                     </li>
+                    
                   </ul>
                 )}
               </div>
@@ -85,7 +85,10 @@ module.exports = function Layout({ children, login }) {
           </nav>
         </header>
       </head>
-      <body>{children}</body>
+      <body>
+       
+        {children}
+      </body>
     </html>
   );
 };

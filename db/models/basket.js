@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Basket.init(
     {
+      
       ClientId: DataTypes.INTEGER,
       pizzaID: DataTypes.INTEGER,
       order: DataTypes.DATE,
