@@ -10,12 +10,12 @@ const path = require("path");
 const { getTime, checkDB } = require("./src/middlewares/checkingDB");
 const { secure, check } = require("./src/middlewares/secure");
 
-
 const mainPage = require("./src/routers/main.router");
 const registerRouter = require("./src/routers/registr.router");
-const loginRouter = require("./src/routers/login.router")
-const basketRouter = require("./src/routers/basket.router")
-const historyRouter = require("./src/routers/cabinet.router")
+const loginRouter = require("./src/routers/login.router");
+const basketRouter = require("./src/routers/basket.router");
+const historyRouter = require("./src/routers/cabinet.router");
+const redactingRouter = require("./src/routers/redact.router");
 
 const PORT = process.env.PORT || 3100;
 
@@ -45,9 +45,10 @@ app.use(session(sessionConfig));
 
 app.use("/", mainPage);
 app.use("/registr", secure, registerRouter);
-app.use("/login",  loginRouter);
+app.use("/login", loginRouter);
 app.use("/basket", basketRouter);
-app.use("/cabinet", basketRouter);
+
+app.use("/cabinet", redactingRouter);
 
 app.listen(PORT, () => {
   console.log(`Сервер запущен на порту: ${PORT}`);

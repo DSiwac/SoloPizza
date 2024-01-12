@@ -4,7 +4,7 @@ const Layout = require("./Layout");
 module.exports = function MainPage({ login, pizzas }) {
   return (
     <Layout login={login}>
-      <form action="/" method="GET" id="mainForm">
+      
         <div className="cardDiv">
           {pizzas.map((pizza) => (
             <div key={pizza.id} className="card" style={{ width: "18rem" }}>
@@ -55,7 +55,7 @@ module.exports = function MainPage({ login, pizzas }) {
           <script src="https://api-maps.yandex.ru/2.1/?apikey=6f2f6c61-b308-4695-a4c2-c977f7f6967f&lang=ru_RU"></script>
           <script src="map.js"></script>
         </div>
-      </form>
+      
     </Layout>
   );
 };

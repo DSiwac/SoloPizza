@@ -26,7 +26,7 @@ module.exports = function Basket({ login, basketEntries }) {
                   <div className="card-body">
                     <h5 className="card-title">{entry.Pizza.name}</h5>
                     <p className="card-text">{entry.Pizza.comp}</p>
-                    <h5>{entry.id}rtyrtyrtyrty</h5>
+                    
                     <button id={entry.Pizza.id} className="btn btn-danger">
                       Удалить
                     </button>
